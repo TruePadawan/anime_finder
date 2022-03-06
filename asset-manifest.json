@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anime_finder/static/css/main.d0633c57.css",
+    "main.js": "/anime_finder/static/js/main.206585a8.js",
+    "index.html": "/anime_finder/index.html",
+    "main.d0633c57.css.map": "/anime_finder/static/css/main.d0633c57.css.map",
+    "main.206585a8.js.map": "/anime_finder/static/js/main.206585a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0633c57.css",
+    "static/js/main.206585a8.js"
+  ]
+}
