@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+.animeItem {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4px;
+  border-radius: 10px;
+  color: gainsboro;
+  background-color: rgba(33, 32, 32, 0.849);
+  text-align: center;
+  font-family: "Sansita Swashed", cursive;
+  box-shadow: 2px -2px 6px rgba(80, 80, 80, 0.829);
+}
+
+.animeItem > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.animeItem > div > div {
+  align-self: stretch;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: larger;
+}
+
+.animeItem > div > div > span:nth-child(1) > svg {
+  color: lightblue;
+  vertical-align: text-bottom;
+}
+
+.animeItem img {
+  width: 14rem;
+  height: auto;
+  border-radius: 10px;
+}
