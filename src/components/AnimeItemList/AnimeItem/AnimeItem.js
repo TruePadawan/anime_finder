@@ -4,7 +4,9 @@ import "./AnimeItem.css";
 export default function AnimeItem(props) {
   return (
     <li className="animeItem">
-      <p>{props.title}</p>
+      <a target="_blank" rel="noreferrer" href={props.url}>
+        {props.title}
+      </a>
       <div>
         <img src={props.imgSrc} alt={props.title} />
         <div>

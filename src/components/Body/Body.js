@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AnimeItemList from "../AnimeItemList/AnimeItemList";
+import RestartAlt from "@mui/icons-material/RestartAlt";
 
 import "./Body.css";
 
@@ -33,9 +34,7 @@ export default function Body() {
         <input minLength="2" required />
         <button>Search</button>
       </form>
-      {requestLoading && (
-        <p style={{ textAlign: "center", fontWeight: "bold" }}>Searching</p>
-      )}
+      {requestLoading && <RestartAlt />}
       {!requestLoading && <AnimeItemList list={animeList} />}
     </>
   );

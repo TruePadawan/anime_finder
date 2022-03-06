@@ -8,6 +8,7 @@ export default function AnimeItemList({ list }) {
       <AnimeItem
         key={item.mal_id}
         imgSrc={item.images.jpg.large_image_url}
+        url={item.url}
         title={item.title}
         score={item.score}
         episodes={item.episodes}
