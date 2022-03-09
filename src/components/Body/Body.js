@@ -7,6 +7,7 @@ import "./Body.css";
 export default function Body() {
   const [animeList, setAnimeList] = useState([]);
   const [requestLoading, setRequestLoading] = useState(false);
+  const [dataNotFound, setDataNotFound] = useState(false);
 
   async function searchForAnime(title) {
     setRequestLoading(true);
@@ -19,6 +20,12 @@ export default function Body() {
     const data = (await request.json()).data;
     setAnimeList(data);
     setRequestLoading(false);
+    if (data.length === 0) {
+      setDataNotFound(true);
+      return;
+    } else if (dataNotFound) {
+      setDataNotFound(false);
+    }
   }
 
   function formSubmitHandler(e) {
@@ -35,7 +42,10 @@ export default function Body() {
         <button>Search</button>
       </form>
       {requestLoading && <RestartAlt />}
-      {!requestLoading && <AnimeItemList list={animeList} />}
+      {!requestLoading && dataNotFound && <p>Not Found</p>}
+      {!requestLoading && animeList.length > 0 && (
+        <AnimeItemList list={animeList} />
+      )}
     </>
   );
 }
